@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { BsFillBookmarkCheckFill } from "react-icons/bs";
 const Blog = ({blog, handleAddToBookmark, handleMarkAsRead}) => {
-    const {id, title, cover, reading_time, author, author_img, posted_date, hashtags} = blog;
+    const {id, post, title, cover, reading_time, author, author_img, posted_date, hashtags} = blog;
     return (
         <div className='my-10'>
             <img className=' w-[850px] h-[450px] rounded-lg mb-6' src={cover} alt={`cover picture for ${title}`} />
@@ -25,6 +25,9 @@ const Blog = ({blog, handleAddToBookmark, handleMarkAsRead}) => {
                 {
                 hashtags.map((hash, idx) => <span key={idx}><a href="">{hash}</a> </span>)
                 }
+            </p>
+            <p className='text-justify mb-5'>
+                {post}
             </p>
             <button className='text-[#6047EC] px-5 py-2 bg-[#6047EC1A] border border-[#6047EC] rounded-lg font-bold'
             onClick={()=>handleMarkAsRead(id, reading_time)}>Mark As Read</button>
