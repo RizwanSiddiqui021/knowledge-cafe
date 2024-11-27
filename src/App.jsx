@@ -22,7 +22,7 @@ const handleMarkAsRead = (id, time) =>{
   return (
     <div className='max-w-7xl mx-auto'>
       <Header></Header>
-      <div className='md:flex'>
+      <div className='md:flex gap-7'>
         <Blogs handleAddToBookmark={handleAddToBookmark} handleMarkAsRead={handleMarkAsRead}></Blogs>
         <Bookmarks bookmarks={bookmarks} readingTime={readingTime}></Bookmarks>
       </div>
